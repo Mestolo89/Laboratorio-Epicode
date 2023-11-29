@@ -20,11 +20,12 @@ void clear_input_buffer() {
 }
 
 char nuova_partita(char scelta){
-    char nomeu[10];
+    char nomeu[10]={'\0'};
     int risposta, punti = 0;
     
     
     printf("Come ti chiami?\n");
+    clear_input_buffer();
     fgets(nomeu, sizeof(nomeu), stdin);
     
     printf("Ciao %s!Per rispondere ad ogni domanda seleziona il numero corrispondente a quella che pensi sia la risposta esatta!\n", nomeu);
@@ -96,6 +97,7 @@ char nuova_partita(char scelta){
     if(scelta =='a'){
             
         nuova_partita(scelta);
+        
             
             
     }else if(scelta =='b'){
